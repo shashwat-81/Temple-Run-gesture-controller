@@ -13,7 +13,7 @@ draw = mp.solutions.drawing_utils
 prev_x, prev_y = 0, 0
 last_gesture_time = time.time()
 
-# 🧠 Function to focus the emulator window
+# Function to focus the emulator window
 def focus_emulator():
     for window in gw.getWindowsWithTitle('BlueStacks'):  # Change to 'Nox' if you're using NoxPlayer
         try:
@@ -22,7 +22,7 @@ def focus_emulator():
         except:
             pass  # If window is minimized or can't be activated
 
-# 🧠 Detect direction of hand movement with better sensitivity
+# Detect direction of hand movement with better sensitivity
 def detect_gesture(dx, dy):
     if abs(dx) > abs(dy):
         if dx > 0.05:
@@ -36,7 +36,7 @@ def detect_gesture(dx, dy):
             return 'down'
     return 'none'
 
-# 🧠 Simulate key press
+# Simulate key press
 def send_key(gesture):
     focus_emulator()
     if gesture == 'left':
@@ -48,7 +48,7 @@ def send_key(gesture):
     elif gesture == 'down':
         pyautogui.press('down')
 
-# 🧠 Main loop
+# Main loop
 while True:
     success, frame = cap.read()
     frame = cv2.flip(frame, 1)
