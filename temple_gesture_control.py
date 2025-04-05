@@ -73,7 +73,7 @@ while True:
 
             prev_x, prev_y = x, y
 
-            # 👁️ Visual feedback on screen
+            # Visual feedback on screen
             cv2.putText(frame, f"Gesture: {gesture}", (50, 50),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3)
 
