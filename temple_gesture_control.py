@@ -20,7 +20,7 @@ def focus_emulator():
             window.activate()
             break
         except:
-            pass  # If window is minimized or can't be activated
+            pass 
 
 # Detect direction of hand movement with better sensitivity
 def detect_gesture(dx, dy):
